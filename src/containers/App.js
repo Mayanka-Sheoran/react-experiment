@@ -5,9 +5,7 @@ import actions from '../actions/index.js';
 import {connect} from 'react-redux';
 
 function mapStateToProps(state){
-  return {
-    id: '0'  	
-  }
+  return state
 }
 
 function mapDispatchToProps(dispatch){

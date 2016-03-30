@@ -1,14 +1,9 @@
-import { createStore,compose, applyMiddleware } from 'redux'
+import { createStore,compose,applyMiddleware } from 'redux'
 import rootReducer from '../reducers/index.js'
-
-const initialState = [
-  {
-    id : '0'
-  }
-]
+import thunk from 'redux-thunk'
 
 let finalCreateStore = compose(
-  applyMiddleware()
+  applyMiddleware(thunk)
 )(createStore);
 
 const store = finalCreateStore(rootReducer)
