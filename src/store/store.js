@@ -6,7 +6,6 @@ let finalCreateStore = compose(
   applyMiddleware(thunk)
 )(createStore);
 
-const store = finalCreateStore(rootReducer)
+const store = finalCreateStore(rootReducer,window.devToolsExtension ? window.devToolsExtension() : undefined)
 
-export default store; 
-
+export default store;
